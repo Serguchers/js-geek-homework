@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+       'use strict';
+       const products = [
+            {
+                id: 3,
+                price: 200,
+            },
+            {
+                id: 4,
+                price: 900,
+            },
+            {
+                id: 1,
+                price: 1000,
+            },
+        ];
+        products.forEach(arr => arr.price = arr.price * 0.85)
+        for (let product of products) {
+            console.log(product.id, product.price)
+        }
+    </script>
+</body>
