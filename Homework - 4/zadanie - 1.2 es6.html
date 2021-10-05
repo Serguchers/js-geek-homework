@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+       'use strict';
+        class Post {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+
+            edit(new_text) {
+                this.text = new_text;
+            }
+        }
+
+        class AttachedPost extends Post {
+            constructor(author, text, date) {
+                super(author, text, date);
+                this.highlighted = false;
+            }
+
+            makeTextHighlighted() {
+                this.highlighted = true;
+            }
+        }
+
+        let post1 = new Post('A.A. Aaaa', 'Abc', '20.02.1900');
+        console.log(post1.text);
+        post1.edit('Bbbb');
+        console.log(post1.text);
+
+        let attpost1 = new AttachedPost('B.B. Abc', 'Pppp', '12.12.1800');
+        console.log(attpost1.text);
+        attpost1.edit('l;asd;ladl');
+        console.log(attpost1.text);
+        console.log(attpost1.highlighted);
+        attpost1.makeTextHighlighted();
+        console.log(attpost1.highlighted);
+    </script>
+</body>
