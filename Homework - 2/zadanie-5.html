@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+       'use strict';
+       function sum_func(num1, num2) {
+            return num1 + num2
+       }
+       function dif_func(num1, num2) {
+            return num1 - num2
+       }
+       function div_func(num1, num2) {
+            return num1 / num2
+       }
+       function mul_func(num1, num2) {
+            return num1 * num2
+       }
+
+       function mathOperation(arg1, arg2, operation) {
+           switch(operation) {
+                case 'summ':
+                    return sum_func(arg1, arg2)
+                case 'diff':
+                    return dif_func(arg1, arg2)
+                case 'div':
+                    return div_func(arg1, arg2)
+                case 'mul':
+                    return mul_func(arg1, arg2)
+                default:
+                    throw Error('Переданы неверные аргументы.')
+                
+           }
+       }
+       alert(mathOperation(200, 10, 'summ'))
+       alert(mathOperation(200, 10, 'diff'))
+       alert(mathOperation(200, 10, 'div'))
+       alert(mathOperation(200, 10, 'mul'))
+       alert(mathOperation('dadada', '12', 'eqqe'))
+
+    </script>
+</body>
